@@ -12,5 +12,4 @@ rm -rf honggfuzz
 mkdir IN
 echo A >IN/123456789089876543210
 
-
-honggfuzz -i IN/ -- fuzz_sdp ___FILE___
+honggfuzz -i IN/ -M -- civetweb_fuzz1 ___FILE___
