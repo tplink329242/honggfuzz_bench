@@ -9,8 +9,5 @@ make install
 cd..
 rm -rf honggfuzz
 
-mkdir IN
-echo A >IN/123456789089876543210
-
 chmod 777 civetweb_fuzz1
-honggfuzz -i IN/ -- civetweb_fuzz1 ___FILE___
+honggfuzz -i fuzz_config_init_seed_corpus -- fuzz_config_init ___FILE___
