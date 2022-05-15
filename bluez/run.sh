@@ -5,4 +5,4 @@ git clone https://github.com/google/honggfuzz.git
 cd honggfuzz
 make
 make install
-honggfuzz -n1 -z -i dns_message_parse_seed_corpus -- dns_message_parse_fuzzer ___FILE___
+honggfuzz -n1 -u -i IN/ -- fuzz_sdp ___FILE___
