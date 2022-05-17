@@ -9,8 +9,4 @@ make install
 cd..
 rm -rf honggfuzz
 
-mkdir IN
-echo A >IN/123456789089876543210
-
-
-honggfuzz -i IN/ -- fuzz_sdp ___FILE___
+honggfuzz -i testcase -- fuzz_sdp ___FILE___
