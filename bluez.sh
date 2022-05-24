@@ -1,13 +1,7 @@
 #!/bin/sh
 
-sh install_honggfuzz.sh
+cd /root/honggfuzz_bench/bluez/
 
-cd bluez/
+nohup sh run.sh > full.log 2>&1 &
 
-mkdir IN
-
-echo A > IN/1
-
-nohup honggfuzz -i IN/ -- fuzz_sdp ___FILE___ > full.log 2>&1 &
-
-python extract_log.py
+python3 extract_log.py 1800 $0

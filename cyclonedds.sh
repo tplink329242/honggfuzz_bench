@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /root/honggfuzz_bench/cyclonedds/
+cd /root/honggfuzz_bench/e2fsprogs/
 
 nohup sh run.sh > full.log 2>&1 &
 
